@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
     <head>
 <style>
     li{
@@ -22,12 +22,44 @@
 </style>
     </head>
     <body>
-     <h1>Hello World</h1>   
+     <h1>Hello World</h1>
      <div><ul>
      </ul></div>
-    <script>
-    let ul = document.querySelector('ul');
-    const h1 = document.querySelector('h1'); 
+ -->
+    <html>
+      <head>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+    <style>
+      #employee-list{
+        display: flex;
+        flex-wrap: wrap;
+        width: 300px;
+      }
+
+      button {
+        padding: 10px;
+        margin: 10px;
+        background-color: dodgerblue;
+        border-radius: 5px;
+      }
+    </style>
+      </head>
+      <body>
+        <div id='container'>
+        <h1 id='title'>Acme Employees DOM</h1>
+        <div>Choose your three favorites employees.</div>
+        <div id='employee-list'>
+        </div>
+        <div id='keys'>
+          <div class='key'>
+            Favorite:
+            <div class='swatch favorite'/>
+          </div>
+        </div>
+          </div>
+          <script>
+            let ul = document.querySelector('ul');
+            const h1 = document.querySelector('h1');
            const employees = [
     { id: 1, name: 'moe'},
     { id: 2, name: 'larry'},
@@ -38,12 +70,13 @@
     { id: 8, name: 'shep Jr.'},
     { id: 99, name: 'lucy'}
   ];
+  let emps = document.getElementById('employee-list');
   employees.forEach(employee =>{
-      let li = document.createElement('li');
-      li.innerHTML = employee.name;
-      ul.append(li);
+      let button = document.createElement('button');
+      button.innerHTML = employee.name;
+      emps.append(button);
   });
- 
-       </script> 
+
+       </script>
     </body>
 </html>
