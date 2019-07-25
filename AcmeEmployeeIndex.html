@@ -4,9 +4,13 @@
 </style>
     </head>
     <body>
-        
+     <h1>Hello World</h1>   
+     <ul>  
+     </ul>
        
        <script>
+    const ul = document.querySelector('ul');
+    const h1 = document.querySelector('h1'); 
            const employees = [
     { id: 1, name: 'moe'},
     { id: 2, name: 'larry'},
@@ -17,6 +21,11 @@
     { id: 8, name: 'shep Jr.'},
     { id: 99, name: 'lucy'}
   ];
+  employees.forEach(employee =>{
+      const li = document.createElement('li');
+      li.innerHTML = employee.name;
+  })
+  ul.append(li)
        </script> 
     </body>
 </html>
